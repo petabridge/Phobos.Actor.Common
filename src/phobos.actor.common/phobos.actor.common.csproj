@@ -3,7 +3,8 @@
 
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Description>Common interfaces and classes used inside Phobos.Actor consumers.</Description>
   </PropertyGroup>
 
 </Project>
