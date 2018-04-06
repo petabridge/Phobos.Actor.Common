@@ -6,11 +6,12 @@
     <PackageReleaseNotes>Introduced the following two interfaces:
 `INeverTrace` - disables all tracing for any actors who implement this interface.
 `INeverMonitor` - disables all monitoring for any actors who implement this interface.</PackageReleaseNotes>
-    <PackageIconUrl>https://petabridge.com/images/logo.png</PackageIconUrl>
+    <PackageIconUrl>https://phobos.petabridge.com/images/phobos_profile_icon.png</PackageIconUrl>
     <PackageProjectUrl>
       https://phobos.petabridge.com/
     </PackageProjectUrl>
     <PackageLicenseUrl>
+      https://github.com/petabridge/Phobos.Actor.Common/blob/dev/LICENSE
     </PackageLicenseUrl>
     <Tags>akka.net phobos tracing opentracing distributed-tracing monitoring</Tags>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
