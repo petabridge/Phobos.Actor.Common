@@ -7,7 +7,7 @@
 namespace Phobos.Actor.Common
 {
     /// <summary>
-    ///     Marker interface used to indiate that this actor never
+    ///     Marker interface used to indicate that this actor or message never
     ///     produces Phobos.Monitoring events under any circumstances.
     /// </summary>
     /// <remarks>
