@@ -1,0 +1,31 @@
+# Release task for PbLib projects
+# See https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema for reference
+
+pool:
+  vmImage: vs2017-win2016
+  demands: Cmd
+
+trigger: none
+
+variables:
+  - group: signingSecrets #create this group with SECRET variables `signingUsername` and `signingPassword`
+  - group: nightlyNuGet  #create this group with SECRET variables `nugetKey`
+  - group: SleetNuget #used for Sleet push
+  - name: githubConnectionName
+    value: Petabridge #replace this
+  - name: projectName
+    value: Phobos.Actor.Common #replace this
+  - name: githubRepositoryName
+    value: petabridge/phobos.actor.common #replace this
+
+steps:
+- task: BatchScript@1
+  displayName: 'FAKE Build'
+  inputs:
+    filename: build.cmd
+    arguments: 'Nuget SignClientUser=$(signingUsername) SignClientSecret=$(signingPassword) nugetpublishurl=$(nugetPublishUrl) nugetkey=$(nugetKey) UseSleet=true nugetprerelease=dev'
+  env:
+    SleetAzureUrl: $(SleetAzureUrl)
+    SleetAzureContainerName: $(SleetAzureContainerName)
+    SleetAzureConnectionString: $(SleetAzureConnectionString)
+    BUILD_NUMBER: $(Build.BuildId) 
