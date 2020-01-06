@@ -28,6 +28,26 @@ steps:
   inputs:
     filename: build.cmd
     arguments: 'All SignClientUser=$(signingUsername) SignClientSecret=$(signingPassword) nugetpublishurl=$(nugetPublishUrl) nugetkey=$(nugetKey) UseSleet=true'
+  continueOnError: true  # 'true' if future steps should run even if this step fails; defaults to 'false'
+
+- task: CopyFiles@2
+  displayName: 'Copy Build Output'
+  inputs:
+    sourceFolder: 'bin/nuget'
+    contents: '**\*'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+    continueOnError: true  # 'true' if future steps should run even if this step fails; defaults to 'false'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'nuget_pack-$(Build.BuildId)'
+
+# terminate build if we've failed prior to this point
+- script: 'echo 1>&2'
+  failOnStderr: true
+  displayName: 'If above is partially succeeded, then fail'
+  condition: eq(variables['Agent.JobStatus'], 'SucceededWithIssues')
 
 - task: GitHubRelease@0
   displayName: 'GitHub release (create)'
