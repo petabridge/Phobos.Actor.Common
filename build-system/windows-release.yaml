@@ -14,7 +14,7 @@ variables:
   - group: signingSecrets #create this group with SECRET variables `signingUsername` and `signingPassword`
   - group: nugetKeys #create this group with SECRET variables `nugetKey`
   - name: githubConnectionName
-    value: Petabridge #replace this
+    value: PhobosReleaseNotes
   - name: projectName
     value: Phobos.Actor.Common #replace this
   - name: githubRepositoryName
