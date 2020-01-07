@@ -10,7 +10,7 @@ namespace Phobos.Actor.Common
     ///     Marker interface that indicates that this actor, message, etc is used
     ///     by Phobos to begin traces.
     /// </summary>
-    public interface ITrace
+    public interface IWithTrace
     {
     }
 }

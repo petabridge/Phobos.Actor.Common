@@ -9,7 +9,7 @@ namespace Phobos.Actor.Common
     /// <summary>
     ///     Marker interface used to indicate that this actor, message, etc always records metric events.
     /// </summary>
-    public interface IMonitor
+    public interface IWithMetrics
     {
     }
 }
