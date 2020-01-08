@@ -9,7 +9,7 @@ namespace Phobos.Actor.Common
     /// <summary>
     ///     Marker interface that indicates that this resource is fully instrumented.
     /// </summary>
-    public interface IInstrumented : IWithTrace, IWithMetrics
+    public interface IInstrumented : IWithTracing, IWithMetrics
     {
     }
 }
