@@ -2,12 +2,8 @@
   <PropertyGroup>
     <Copyright>Copyright © 2018 Petabridge</Copyright>
     <Authors>Petabridge</Authors>
-    <VersionPrefix>1.1.0</VersionPrefix>
-    <PackageReleaseNotes>Introduced the following interfaces:
-[`ITrace`](https://phobos.petabridge.com/api/Phobos.Actor.Common.ITrace.html) - explicitly adds tracing support to a message, actor, etc.
-[`IMonitor`](https://phobos.petabridge.com/api/Phobos.Actor.Common.IMonitor.html) - explicitly adds monitoring support to a message, actor, etc.
-[`INeverInstrumented`](https://phobos.petabridge.com/api/Phobos.Actor.Common.INeverInstrumented.html) - permanently disables tracing and monitoring support for any actors marked with this interface and cannot be overridden by configuration.
-[`IInstrumented`](https://phobos.petabridge.com/api/Phobos.Actor.Common.IInstrumented.html) - explicitly enables both tracing and monitoring support for this object.</PackageReleaseNotes>
+    <VersionPrefix>1.1.1</VersionPrefix>
+    <PackageReleaseNotes>Renamed `IWithTrace` to to `IWithTracing`.</PackageReleaseNotes>
     <PackageIconUrl>https://phobos.petabridge.com/images/phobos_profile_icon.png</PackageIconUrl>
     <PackageProjectUrl>
       https://phobos.petabridge.com/
@@ -19,7 +15,7 @@
     <NoWarn>$(NoWarn);CS1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
-    <XunitVersion>2.3.0</XunitVersion>
+    <XunitVersion>2.4.1</XunitVersion>
     <TestSdkVersion>16.4.0</TestSdkVersion>
   </PropertyGroup>
 </Project>

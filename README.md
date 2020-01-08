@@ -7,9 +7,9 @@
 At present, this repository exposes the following interfaces for use within [Akka.NET](http://getakka.net/) applications that intend to leverage Phobos in production:
 
 * [`INeverTrace`](https://phobos.petabridge.com/api/Phobos.Actor.Common.INeverTrace.html) - permanently disables tracing support for any actors marked with this interface and cannot be overridden by configuration.
-* [`IWithTrace`](https://phobos.petabridge.com/api/Phobos.Actor.Common.IWithTrace.html) - explicitly adds tracing support to a message, actor, etc.
+* [`IWithTracing`](https://phobos.petabridge.com/api/Phobos.Actor.Common.IWithTracing.html) - explicitly adds tracing support to a message, actor, etc.
 * [`INeverMonitor`](https://phobos.petabridge.com/api/Phobos.Actor.Common.INeverMonitor.html) - permanently disables monitoring support for any actors marked with this interface and cannot be overridden by configuration.
-* [`IWithMonitor`](https://phobos.petabridge.com/api/Phobos.Actor.Common.IWithMonitor.html) - explicitly adds monitoring support to a message, actor, etc.
+* [`IWithMetrics`](https://phobos.petabridge.com/api/Phobos.Actor.Common.IWithMetrics.html) - explicitly adds monitoring support to a message, actor, etc.
 
 And then we have some aggregate interfaces for simplification purposes:
 
