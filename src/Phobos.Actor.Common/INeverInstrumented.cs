@@ -7,8 +7,7 @@
 namespace Phobos.Actor.Common
 {
     /// <summary>
-    ///     Marker interface used to indicate that this particular resource is always instrumented.
-    ///     Usually reserved for internal / system functionality.
+    ///     Marker interface used to indicate that this particular resource is never instrumented.
     /// </summary>
     public interface INeverInstrumented : INeverTrace, INeverMonitor
     {
