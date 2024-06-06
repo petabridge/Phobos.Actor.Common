@@ -14,7 +14,7 @@ pr: none
 
 variables:
   - group: signingSecrets #create this group with SECRET variables `signingUsername` and `signingPassword`
-  - group: nugetKeys #create this group with SECRET variables `nugetKey`
+  - group: phoboActorCommonNuGet #create this group with SECRET variables `nugetKey`
   - name: githubConnectionName
     value: PhobosReleaseNotes
   - name: projectName
@@ -27,7 +27,7 @@ steps:
   displayName: 'FAKE Build'
   inputs:
     filename: build.cmd
-    arguments: 'All SignClientUser=$(signingUsername) SignClientSecret=$(signingPassword) nugetpublishurl=$(nugetPublishUrl) nugetkey=$(nugetKey) UseSleet=true'
+    arguments: 'All SignClientUser=$(signingUsername) SignClientSecret=$(signingPassword) nugetpublishurl=$(nugetPublishUrl) nugetkey=$(nugetKey)'
   continueOnError: true  # 'true' if future steps should run even if this step fails; defaults to 'false'
 
 - task: CopyFiles@2
