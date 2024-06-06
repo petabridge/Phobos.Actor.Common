@@ -15,7 +15,7 @@
     <NoWarn>$(NoWarn);CS1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
-    <XunitVersion>2.4.1</XunitVersion>
+    <XunitVersion>2.8.1</XunitVersion>
     <TestSdkVersion>17.3.3</TestSdkVersion>
   </PropertyGroup>
 </Project>
